@@ -3,203 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Componentes de Hardware</title>
+    <title>Informações do Curso</title>
     <style>
-body {
-  background-image: url('https://i.gifer.com/origin/c0/c05e0a986df727559354c449602105d0_w200.webp');
-  background-position: center;
-  background-repeat: none;
-}
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .card {
-            background-color: rgba(2, 2, 2, 0.8);
-            border: 1px solid rgba(216, 10, 10, 0.3);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 15px;
-            box-shadow: 0 4px 8px rgba(7, 10, 223, 0.2);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            background-color: rgba(128, 128, 128, 0.9);
-            transform: translateY(-5px);
-            transition: all 0.3s ease;
-        }
-
-        .card img {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-
-        .card h2 {
-            color: #fff;
-            margin-bottom: 15px;
-        }
-
-        .card p {
-            color: #e0e0e0;
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-
-        .card a {
-            color: yellow;
+        body {
+            background-image: url('https://media2.giphy.com/media/8tVNccNJ1ZpV09G2BZ/giphy.webp?cid=790b7611nz14k6tvjv08a104zsywykmans32k0qnb74l0uoc&ep=v1_gifs_search&rid=giphy.webp&ct=g'); /* Adicione o caminho da sua imagem aqui */
+            background-size: cover; /* Faz a imagem cobrir todo o fundo */
+            background-position: center; /* Centraliza a imagem */
         }
 
         h1 {
             text-align: center;
-            color: rgb(7, 7, 7);
-            font-size: 2.5em;
+            color: #ff0000; /* Ouro */
+            font-size: 3em;
             margin-bottom: 30px;
-        }
-        h1{
-            color: #0d1cec;
-        }
-        h2{
-            color: #1fcc2e;
-        }
-        p{
-            color:#1fcc2e;
-        }
-          /* Footer */
-      
-
-        .footer-title {
-            font-size: 14px;
-            margin-bottom: 16px;
+            animation: fadeIn 1s ease, bounce 2s infinite; /* Animação de fade-in e bounce */
         }
 
-        .footer-links {
-            list-style: none;
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .footer-link {
-            color: rgb(0, 0, 0);
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 0 auto;
+            perspective: 1000px; /* Para efeito 3D */
+            margin-bottom: 40px; /* Espaço abaixo dos cards */
+        }
+
+        .card {
+            width: 250px;
+            height: auto; /* Permite que a altura se ajuste ao conteúdo */
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: rgba(0, 31, 63, 0.8); /* Azul Marinho com transparência */
+            opacity: 0; /* Começa invisível */
+            animation: fadeIn 0.5s forwards; /* Animação de fade-in para os cards */
+        }
+
+        .link-saber-mais {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #001f3f; /* Azul Marinho */
+            padding: 5px 10px;
+            border-radius: 5px;
             text-decoration: none;
-            margin-bottom: 13px;
-            display: block;
-            font-size: 16px;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+            display: inline-block; /* Para garantir que o link tenha um bloco */
+            margin-top: 20px; /* Espaço acima do link */
         }
-        h3{
-            color: black;
+
+        .link-saber-mais:hover {
+            background-color: #FFD700; /* Ouro */
+        }
+
+        .card-info {
+            margin: 10px 0; /* Espaçamento entre o título e as informações */
+            display: flex;
+            flex-direction: column; /* Alinha os itens verticalmente */
+        }
+
+        .card-info p {
+            margin: 5px 0; /* Margem entre os parágrafos */
         }
     </style>
 </head>
 <body>
-    <div class="container-">
-        <h1>Componentes de Hardware</h1>
-        
-        <div class="cards-grid">
-            <div class="card">
-               
-                <h2>Processador</h2>
-                <p>O cérebro do computador, responsável por processar todas as informações e realizar cálculos.</p>
-                <a href="processador.html">Saiba mais</a>
+    <h1>Informações do Curso</h1>
+
+    <div class="card-container">
+        <div class="card">
+            <h3>Sistema Operativo - Tipologia</h3>
+            <div class="card-info">
+                <div class="code">UFCD: 0797</div>
+                <div class="description">Descrição do módulo de Sistema Operativo.</div>
             </div>
+            <a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/779" target="_blank" class="link-saber-mais">Explorar Módulo →</a>
+        </div>
 
-            <div class="card">
-                
-                <h2>Memória</h2>
-                <p>Armazena dados temporários e permanentes necessários para o funcionamento do sistema.</p>
-                <a href="memoria.html">Saiba mais</a>
+        <!-- Utilitários -->
+        <div class="card">
+            <h3>Utilitários</h3>
+            <div class="card-info">
+                <div class="code">UFCD: 0798</div>
+                <div class="description">Ferramentas e utilitários essenciais para o desenvolvimento.</div>
             </div>
+            <a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/780" target="_blank" class="link-saber-mais">Explorar Módulo →</a>
+        </div>
 
-            <div class="card">
-              
-                <h2>Placa Mãe</h2>
-                <p>Componente principal que conecta e permite a comunicação entre todas as partes do computador.</p>
-                <a href="placamae.html">Saiba mais</a>
+        <!-- Python -->
+        <div class="card">
+            <h3>Fundamentos de Python</h3>
+            <div class="card-info">
+                <div class="code">UFCD: 10793</div>
+                <div class="description">Introdução à programação utilizando Python, conceitos básicos e práticas.</div>
             </div>
+            <a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/17537" target="_blank" class="link-saber-mais">Explorar Módulo →</a>
+        </div>
 
-            <div class="card">
-               
-                <h2>Disco Rígido</h2>
-                <p>Responsável pelo armazenamento permanente de dados e arquivos do sistema.</p>
-                <a href="disco.html">Saiba mais</a>
+        <!-- C/C++ -->
+        <div class="card">
+            <h3>Programação em C/C++ Fundamentos</h3>
+            <div class="card-info">
+                <div class="code">UFCD: 0809</div>
+                <div class="description">Conceitos fundamentais de programação em C/C++.</div>
             </div>
+            <a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/791" target="_blank" class="link-saber-mais">Explorar Módulo →</a>
+        </div>
 
-            <div class="card">
-                
-                <h2>Fonte de Alimentação</h2>
-                <p>Fornece energia elétrica adequada para todos os componentes do computador.</p>
-                <a href="fonte.html">Saiba mais</a>
+        <!-- Algoritmos -->
+        <div class="card">
+            <h3>Algoritmos</h3>
+            <div class="card-info">
+                <div class="code">UFCD: 0804</div>
+                <div class="description">Lógica de programação e desenvolvimento de algoritmos.</div>
             </div>
+            <a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/786" target="_blank" class="link-saber-mais">Explorar Módulo →</a>
+        </div>
 
-            <div class="card">
-                
-                <h2>Placa de Vídeo</h2>
-                <p>Processa as informações gráficas e as envia para o monitor.</p>
-                <a href="placadevideo.html">Saiba mais</a>
+        <!-- Estrutura de Dados -->
+        <div class="card">
+            <h3>Estrutura de Dados</h3>
+            <div class="card-info">
+                <div class="code">UFCD: 0805</div>
+                <div class="description">Organização e manipulação de dados, tipos de estruturas.</div>
             </div>
+            <a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/787" target="_blank" class="link-saber-mais">Explorar Módulo →</a>
+        </div>
 
-
-            <div class="card">
-              
-                <h2>Pilha</h2>
-                <p>Contém e protege todos os componentes internos do computador.</p>
-                <a href="Pilha.html">Saiba mais</a>
+        <!-- Princípios Metodológicos -->
+        <div class="card">
+            <h3>Princípios Metodológicos</h3>
+            <div class="card-info">
+                <div class="code">UFCD: 0806</div>
+                <div class="description">Metodologias e boas práticas de programação.</div>
             </div>
+            <a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/788" target="_blank" class="link-saber-mais">Explorar Módulo →</a>
+        </div>
 
-            <div class="card">
-              
-                <h2>BIOS</h2>
-                <p>Sistema responsável pelo teste inicial do sistema e configurações básicas.</p>
-                <a href="bios.html">Saiba mais</a>
+        <!-- Análise de Sistemas -->
+        <div class="card">
+            <h3>Análise de Sistemas</h3>
+            <div class="card-info">
+                <div class="code">UFCD: 0811</div>
+                <div class="description">Fundamentos de análise e modelagem de sistemas.</div>
             </div>
+            <a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/793" target="_blank" class="link-saber-mais">Explorar Módulo →</a>
+        </div>
 
-
-            <div class="card">
-                
-                <h2>conveções</h2>
-            
-                    <p>Sistema essencial que realiza testes iniciais e gerencia as configurações básicas do computador.</p>
-               
-                <a href="conveções.html">Saiba mais</a>
+        <!-- SQL -->
+        <div class="card">
+            <h3>Fundamentos de SQL</h3>
+            <div class="card-info">
+                <div class="code">UFCD: 10788</div>
+                <div class="description">Introdução à linguagem SQL e bases de dados.</div>
             </div>
-            
-            <div class="card">
-                
-                <h2>Periféricos </h2>
-                <p>Dispositivos externos que se conectam ao computador para entrada ou saída de dados, como teclado, mouse, monitor, impressora e outros.</p>
-                <a href="perifericos.html">Saiba mais</a>
+            <a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/17532" target="_blank" class="link-saber-mais">Explorar Módulo →</a>
+        </div>
+
+        <!-- Metodologias de Desenvolvimento -->
+        <div class="card">
+            <h3>Metodologias de Desenvolvimento</h3>
+            <div class="card-info">
+                <div class="code">UFCD: 10789</div>
+                <div class="description">Estudo das metodologias de desenvolvimento de software.</div>
             </div>
-
-
-        
-
-            </div>
+            <a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/17533" target="_blank" class="link-saber-mais">Explorar Módulo →</a>
         </div>
     </div>
-    
-            <div>
-                <h3 class="footer-title">AJUDA</h3>
-                <ul class="footer-links">
-                    <li><a href="https://www.instagram.com/_.biellkz/" class="footer-link">Instagram</a></li>
-                    <li><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" class="footer-link">Gmail</a></li>
-                    <li><a href="https://github.com/reinaldsantos" class="footer-link">GitHub</a></li>
-                    
-                </ul>
-            </div>
-            <!-- Mais seções do footer -->
-        </div>
-    </footer>
+
+    <!-- Formas geométricas animadas -->
+    <div class="background-shape" style="top: 10%; left: 10%;"></div>
+    <div class="background-shape" style="top: 30%; left: 50%;"></div>
+    <div class="background-shape" style="top: 60%; left: 20%;"></div>
+    <div class="background-shape" style="top: 80%; left: 70%;"></div>
+
+    <script>
+        // Animação de entrada dos cards
+        const cards = document.querySelectorAll('.card');
+        cards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+            card.style.opacity = 1; // Torna os cards visíveis
+        });
+    </script>
 </body>
-</html> 
+</html>

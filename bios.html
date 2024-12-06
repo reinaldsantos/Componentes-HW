@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIOS - Componentes de Hardware</title>
+    <style>
+        body {
+        background-image: url('https://tallerdehardwareutd.wordpress.com/wp-content/uploads/2018/03/cropped-motherboard_2-wallpaper-2560x14401.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        color: #fff1f1;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 10px;
+        border: 1px solid rgba(0, 255, 0, 0.3);
+    }
+
+    h1, h2 {
+        color: rgb(0, 255, 0);
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 20px 0;
+    }
+
+    .voltar {
+        color: rgb(0, 255, 0);
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+        border: 1px solid rgb(0, 255, 0);
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+    .voltar:hover {
+        background-color: rgba(0, 255, 0, 0.2);
+    }
+   
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BIOS/UEFI</h1>
+        <img src="imagens/bios.jpg" alt="Interface da BIOS">
+        
+        <h2>O que é BIOS?</h2>
+        <p>BIOS (Basic Input/Output System) é um firmware armazenado em um chip na placa-mãe que inicializa e testa os componentes de hardware durante a inicialização do computador e carrega o sistema operacional.</p>
+
+        <h2>BIOS vs UEFI</h2>
+        <ul>
+            <li>BIOS Legado:
+                <ul>
+                    <li>Interface mais antiga e limitada</li>
+                    <li>Suporte apenas para MBR</li>
+                    <li>Limitado a 2TB de armazenamento</li>
+                    <li>Interface baseada em texto</li>
+                </ul>
+            </li>
+            <li>UEFI (Unified Extensible Firmware Interface):
+                <ul>
+                    <li>Interface moderna e gráfica</li>
+                    <li>Suporte para GPT</li>
+                    <li>Sem limitação de armazenamento</li>
+                    <li>Recursos avançados de segurança</li>
+                    <li>Inicialização mais rápida</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Funções Principais</h2>
+        <ul>
+            <li>POST (Power-On Self-Test)
+                <ul>
+                    <li>Verifica CPU</li>
+                    <li>Testa memória RAM</li>
+                    <li>Identifica dispositivos conectados</li>
+                    <li>Verifica integridade do sistema</li>
+                </ul>
+            </li>
+            <li>Configurações de Hardware
+                <ul>
+                    <li>Velocidade do processador</li>
+                    <li>Configurações de memória</li>
+                    <li>Ordem de boot</li>
+                    <li>Gerenciamento de energia</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
